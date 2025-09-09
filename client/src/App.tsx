@@ -17,7 +17,7 @@ function App() {
     const data = await res.json();
     setSuggestions(data.suggestions);
     setLoading(false);
-  };
+  }; 
 
   return (
     <div className="container">
@@ -27,7 +27,7 @@ function App() {
         placeholder="Paste your resume here..."
         value={resumeText}
         onChange={e => setResumeText(e.target.value)}
-      />
+      />   
       <button onClick={analyzeResume} disabled={loading}>
         {loading ? "Analyzing..." : "Analyze"}
       </button>
